@@ -1,4 +1,5 @@
 program := 'rce-mcp'
+install_prefix := `go env GOBIN`
 
 version := 'SNAPSHOT-'+`git describe --tags --always --dirty 2>/dev/null || printf 'unknown'`
 commit_sha := `(git rev-parse HEAD 2>/dev/null || printf 'unknown') | tr -d '\n'`
@@ -53,7 +54,7 @@ test:
     go test ./...
 
 install: build
-    cp -v './build/{{program}}-{{goos}}-{{goarch}}' "$(go env GOBIN)/{{program}}"
+    cp -v './build/{{program}}-{{goos}}-{{goarch}}' "{{install_prefix}}/{{program}}"
 
 clean:
     rm -rf build
