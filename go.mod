@@ -2,8 +2,6 @@ module github.com/acidghost/rce-mcp
 
 go 1.25.5
 
-toolchain go1.27.2
-
 require (
 	github.com/alecthomas/kong v1.16.1
 	github.com/mark3labs/mcp-go v1.3.0
