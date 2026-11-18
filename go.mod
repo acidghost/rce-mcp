@@ -3,7 +3,7 @@ module github.com/acidghost/rce-mcp
 go 1.25.5
 
 require (
-	github.com/alecthomas/kong v1.16.1
+	github.com/alecthomas/kong v1.17.0
 	github.com/mark3labs/mcp-go v1.5.0
 	github.com/rs/zerolog v1.35.1
 )
